@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/loading.css}" />
+    <link rel="stylesheet" th:href="@{/css/header.css}" />
+    <link rel="stylesheet" th:href="@{/css/home.css}" />
+    <script defer th:src="@{/js/jquery.js}"></script>
+    <script defer th:src="@{/js/loading.js}"></script>
+    <script defer th:src="@{/js/home.js}"></script>
+
+    <!-- <link rel="stylesheet" href="../static/css/loading.css" />
+    <link rel="stylesheet" href="../static/css/reset.css" />
+    <link rel="stylesheet" href="../static/css/header.css" />
+    <link rel="stylesheet" href="../static/css/home.css" />
+    <script defer src="../static/Js/jquery.js"></script>
+    <script defer src="../static/Js/loading.js"></script>
+    <script defer src="../static/Js/home.js"></script> -->
+  </head>
+  <body>
+    <div class="loader_container" id="loader_cont_id">
+      <div class="lds-roller" id="loader_main_id">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="problem" id="problem_id">
+        Do you have any problem? <a href="#">Contact us</a> now.
+      </div>
+      <div class="by_who" id="by_who_id">by Natiq</div>
+    </div>
+
+    <header id="header_id">
+      <div class="header_cont">
+        <div class="main_cont" id="main_id_cont">
+          <a href="/">
+            <div class="logo" id="cont_ani_imp2">ChatRoom</div>
+          </a>
+
+          <div class="header_nav_bar" id="cont_ani_imp">
+            <ul class="nav_inner">
+              <li>
+                <a href="/" class="links_header">Settings</a>
+              </li>
+              <li class="must_hide">
+                <a href="/" class="links_header">My Computers</a>
+              </li>
+              <li class="must_hide">
+                <a href="/" class="links_header">Orders</a>
+              </li>
+              <li>
+                <a href="/" class="links_header">Start Shopping</a>
+              </li>
+              <li class="changebly">
+                <a href="/" class="links_header">Log In</a>
+              </li>
+
+              <li class="must_hide admin">
+                <a href="/" class="log_not">
+                  <div class="login_or_sign_up">
+                    <span class="rol_spin">Admin</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header ends -->
+
+    <main>
+      <img
+        th:src="@{/images/bg/bg-1.jpg}"
+        alt="Background"
+        class="bg_container"
+      />
+      <div class="container_login_and_sign_up_main">
+        <div class="container_of_section">
+          <div class="section_1">
+            <div class="text_wlcm big_text">Get started with new ChatRoom!</div>
+            <div class="text_wlcm small_text">
+              The ChatRoom app is a messaging platform that provides users with
+              a secure and user-friendly way to communicate with friends and
+              family.
+            </div>
+          </div>
+          <div class="section_2">
+            <form
+              th:action="@{/create-account}"
+              method="post"
+              class="login_and_signup_cont_inner"
+            >
+              <div class="input_cont_main">
+                <!-- Inputs -->
+                <div class="input_cont">
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    class="input_main"
+                    placeholder="Email"
+                  />
+                  <label for="email" class="check" hidden></label>
+                </div>
+                <!-- Ends -->
+                <div class="input_cont">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="input_main"
+                    placeholder="Name"
+                  />
+                  <label for="name" class="check" hidden></label>
+                </div>
+                <!-- Ends -->
+                <div class="input_cont">
+                  <input
+                    type="text"
+                    name="surname"
+                    id="surname"
+                    class="input_main"
+                    placeholder="Surname"
+                  />
+                  <label for="surname" class="check" hidden></label>
+                </div>
+                <!-- Ends -->
+                <div class="input_cont">
+                  <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    class="input_main"
+                    placeholder="Username"
+                  />
+                  <label for="username" class="check" hidden></label>
+                </div>
+                <!-- Ends -->
+                <div class="input_cont">
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    class="input_main"
+                    placeholder="Password"
+                  />
+                  <label for="password" class="check" hidden></label>
+                </div>
+                <!-- Ends -->
+              </div>
+              <div class="buttons_main_cont">
+                <button class="button_main_submit"><span>Sign Up</span></button>
+                <div class="other_info_for_login_and_sign_up">
+                    <div class="text_wlcm small_text bottom_text">
+                      Already member? <a th:href="@{/login}">Login</a>
+                      now.
+                    </div>
+                  </div>
+              </div>
+
+              <!-- Ends -->
+            </form>
+          </div>
+
+          <!-- end -->
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
