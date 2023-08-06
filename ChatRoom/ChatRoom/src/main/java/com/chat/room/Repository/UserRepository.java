@@ -44,28 +44,28 @@ public class UserRepository {
 
 
 
-    public void addAuthoritiesToUser(String username,List<String> authorities) {
-
-        try {
-            Connection conn = dataSource.getConnection();
-            conn.setAutoCommit(false);
-
-            for (String authority : authorities) {
-                PreparedStatement ps = conn
-
-                        .prepareStatement("insert into authorities (username,authority) values (?,?);");
-                ps.setString(1, username);
-                ps.setString(2, authority);
-                ps.executeUpdate();
-            }
-
-            conn.commit();
-
-            conn.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
+//    public void addAuthoritiesToUser(String username,List<String> authorities) {
+//
+//        try {
+//            Connection conn = dataSource.getConnection();
+//            conn.setAutoCommit(false);
+//
+//            for (String authority : authorities) {
+//                PreparedStatement ps = conn
+//
+//                        .prepareStatement("insert into authorities (username,authority) values (?,?);");
+//                ps.setString(1, username);
+//                ps.setString(2, authority);
+//                ps.executeUpdate();
+//            }
+//
+//            conn.commit();
+//
+//            conn.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
 
 }

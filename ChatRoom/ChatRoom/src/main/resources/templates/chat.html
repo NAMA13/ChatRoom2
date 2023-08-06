@@ -3,8 +3,513 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"
+    />
+
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/loading.css}" />
+    <link rel="stylesheet" th:href="@{/css/header.css}" />
+    <link rel="stylesheet" th:href="@{/css/chat.css}" />
+    <script defer th:src="@{/js/jquery.js}"></script>
+    <script defer th:src="@{/js/loading.js}"></script>
+
+    <link rel="stylesheet" href="../static/css/loading.css" />
+    <link rel="stylesheet" href="../static/css/reset.css" />
+    <link rel="stylesheet" href="../static/css/header.css" />
+    <link rel="stylesheet" href="../static/css/chat.css" />
+    <script defer src="../static/Js/jquery.js"></script>
+    <script defer src="../static/Js/loading.js"></script>
   </head>
   <body>
-    
+    <div class="loader_container" id="loader_cont_id">
+      <div class="lds-roller" id="loader_main_id">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="problem" id="problem_id">
+        Do you have any problem? <a href="#">Contact us</a> now.
+      </div>
+      <div class="by_who" id="by_who_id">by Natiq</div>
+    </div>
+
+    <main>
+      <div class="page_spliter_cont_main_column">
+        <div class="split_frst_section_column">
+          <!-- Header Started -->
+          <header id="header_id">
+            <div class="header_cont">
+              <div class="main_cont" id="main_id_cont">
+                <a href="/">
+                  <div class="logo" id="cont_ani_imp2">ChatRoom</div>
+                </a>
+
+                <div class="header_nav_bar" id="cont_ani_imp">
+                  <ul class="nav_inner">
+                    <li>
+                      <a href="/" class="links_header">Settings</a>
+                    </li>
+                    <li class="must_hide">
+                      <a href="/" class="links_header">My Computers</a>
+                    </li>
+                    <li class="must_hide">
+                      <a href="/" class="links_header">Orders</a>
+                    </li>
+                    <li>
+                      <a href="/" class="links_header">Start Shopping</a>
+                    </li>
+                    <li class="changebly">
+                      <a href="/" class="links_header">Log In</a>
+                    </li>
+
+                    <li class="must_hide admin">
+                      <a href="/" class="log_not">
+                        <div class="login_or_sign_up">
+                          <span class="rol_spin">Admin</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>
+          <!-- Header ends -->
+        </div>
+
+        <div class="split_scnt_section_column">
+          <div class="page_spliter_cont_main_row">
+            <div class="split_frst_section_row">
+              <div class="my_profile_banner_main_inner">
+                <div class="profile_mine_cont_spliter">
+                  <div class="profile_main_cont">
+                    <!-- STARTS -->
+                    <div class="profile_main_cont_inner">
+                      <!--  -->
+                      <div class="profile_main_cont_inner_img_cont">
+                        <div class="profile_main_cont_inner_img">
+                          <img
+                            src="../static/images/profiles/profile_2.png"
+                            alt="Profile"
+                            class="profile_main_cont_inner_img_img"
+                          />
+                        </div>
+                      </div>
+                      <!--  -->
+
+                      <div class="profile_main_cont_inner_name_and_status">
+                        <div class="profile_main_cont_inner_name_name">
+                          Natig Mammadli
+                        </div>
+                        <!--  -->
+                        <div class="profile_main_cont_inner_status online">
+                          Online
+                        </div>
+                        <!--  -->
+                      </div>
+                    </div>
+                    <!-- Ends -->
+                  </div>
+                  <div class="profile_settings_bar">
+                    <!--  -->
+                    <div class="profile_settings_bar_inner">
+                      <button class="profile_settings_bar_inner_icon">
+                        <i class="fi fi-sr-settings icon_inner_profile"></i>
+                      </button>
+                    </div>
+                    <!--  -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="other_people_profile_banner_main_inner">
+                <!-- Started Profile -->
+
+                <!-- One profile str -->
+                <div class="profiles_cont_main_stable">
+                  <div class="profiles_cont_main_stable_inner">
+                    <div class="first_split_profile_cont">
+                      <div class="profiles_cont_main_stable_inner_img_cont">
+                        <div class="profiles_cont_main_stable_inner_img">
+                          <img
+                            src="../static/images/profiles/profile_3.jpeg"
+                            alt="Profile"
+                            class="profiles_cont_main_stable_inner_img_img"
+                          />
+                          <div
+                            class="profiles_cont_main_stable_inner_status online"
+                          ></div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="profiles_cont_main_stable_inner_name_and_info_cont"
+                      >
+                        <div class="profiles_cont_main_stable_inner_name_name">
+                          Rick Sanchez
+                        </div>
+                        <div class="profiles_cont_main_stable_inner_info">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Alias sequi, inventore est autem distinctio
+                          veniam!
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="secont_split_profile_cont">
+                      <div
+                        class="profiles_cont_main_stable_inner_name_and_status"
+                      >
+                        <!--  -->
+                        <div
+                          class="profiles_cont_main_stable_inner_name_and_status_lastest_seen"
+                        >
+                          10:07
+                        </div>
+
+                        <div class="seen_or_not_cont">
+                          <div class="seen_cont two_gnd">
+                            <div class="seen_cont_inner_line"></div>
+                            <div class="seen_cont_inner_line"></div>
+                          </div>
+                        </div>
+
+                        <!--  -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- One profile ends -->
+
+                <!-- One profile str -->
+                <div class="profiles_cont_main_stable">
+                  <div class="profiles_cont_main_stable_inner">
+                    <div class="first_split_profile_cont">
+                      <div class="profiles_cont_main_stable_inner_img_cont">
+                        <div class="profiles_cont_main_stable_inner_img">
+                          <img
+                            src="../static/images/profiles/profile_1.png"
+                            alt="Profile"
+                            class="profiles_cont_main_stable_inner_img_img"
+                          />
+                          <div
+                            class="profiles_cont_main_stable_inner_status offline"
+                          ></div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="profiles_cont_main_stable_inner_name_and_info_cont"
+                      >
+                        <div class="profiles_cont_main_stable_inner_name_name">
+                          Test Tester
+                        </div>
+                        <div class="profiles_cont_main_stable_inner_info">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Alias sequi, inventore est autem distinctio
+                          veniam!
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="secont_split_profile_cont">
+                      <div
+                        class="profiles_cont_main_stable_inner_name_and_status"
+                      >
+                        <!--  -->
+                        <div
+                          class="profiles_cont_main_stable_inner_name_and_status_lastest_seen"
+                        >
+                          18:09
+                        </div>
+
+                        <div class="seen_or_not_cont">
+                          <div class="seen_cont ONE_gnd">
+                            <div class="seen_cont_inner_line"></div>
+                            <div class="seen_cont_inner_line"></div>
+                          </div>
+                        </div>
+
+                        <!--  -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- One profile ends -->
+
+                <!-- One profile str -->
+                <div class="profiles_cont_main_stable">
+                  <div class="profiles_cont_main_stable_inner">
+                    <div class="first_split_profile_cont">
+                      <div class="profiles_cont_main_stable_inner_img_cont">
+                        <div class="profiles_cont_main_stable_inner_img">
+                          <img
+                            src="../static/images/profiles/profile_2.png"
+                            alt="Profile"
+                            class="profiles_cont_main_stable_inner_img_img"
+                          />
+                          <div
+                            class="profiles_cont_main_stable_inner_status donotdisturb"
+                          ></div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="profiles_cont_main_stable_inner_name_and_info_cont"
+                      >
+                        <div class="profiles_cont_main_stable_inner_name_name">
+                          John Doe
+                        </div>
+                        <div class="profiles_cont_main_stable_inner_info">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Alias sequi, inventore est autem distinctio
+                          veniam!
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="secont_split_profile_cont">
+                      <div
+                        class="profiles_cont_main_stable_inner_name_and_status"
+                      >
+                        <!--  -->
+                        <div
+                          class="profiles_cont_main_stable_inner_name_and_status_lastest_seen"
+                        >
+                          00:22
+                        </div>
+
+                        <div class="seen_or_not_cont">
+                          <div class="seen_cont two_gnd">
+                            <div class="seen_cont_inner_line"></div>
+                            <div class="seen_cont_inner_line"></div>
+                          </div>
+                        </div>
+
+                        <!--  -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- One profile ends -->
+
+                <!-- Ends Profile -->
+              </div>
+            </div>
+
+            <div class="split_scnt_section_row">
+              <div class="chat_profile_banner_cont">
+                <div class="selected_profile_cont_mini">
+                  <div class="selected_profile_cont_mini_inner">
+                    <div class="selected_profile_cont_mini_inner_img_cont">
+                      <div class="selected_profile_cont_mini_inner_img">
+                        <img
+                          src="../static/images/profiles/profile_3.jpeg"
+                          alt="Profile"
+                          class="selected_profile_cont_mini_inner_img_img"
+                        />
+                        <div
+                          class="profiles_cont_main_stable_inner_status online"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="selected_profile_cont_mini_inner_name_and_info_cont"
+                    >
+                      <div class="selected_profile_cont_mini_inner_name_name">
+                        Rick Sanchez
+                      </div>
+                      <div class="selected_profile_cont_mini_inner_info">
+                        Last seen today at 10:07
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="other_actions_banner_splited_cont">
+                  <div class="search_cont">
+                    <div class="search_icon">
+                      <i class="fi fi-br-search"></i>
+                    </div>
+                  </div>
+
+                  <div class="call_buttons_cont_and_spliter">
+                    <button class="vo call">
+                      <i class="fi fi-sr-phone-call"></i>
+                    </button>
+                    <div class="line_bnt_split_cont">
+                      <div class="line_bnt_spliter"></div>
+                    </div>
+
+                    <button class="vi call">
+                      <i class="fi fi-sr-video-camera-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main_chat_cont_for_message">
+                <div class="spliter_cont_message_and_send">
+                  <div class="messages_cont_stable">
+                    <!-- Messages -->
+
+                    <div class="messages_cont_main_inner sender">
+                      <div class="messages_cont_main_inner_inner_cnt">
+                        <div
+                          class="message_cont_main_inner_splited_two_tb top_cnt"
+                        >
+                          <div class="message_cont_main_inner_splited_one_lr">
+                            <div class="message_cont_main_inner_inner_img">
+                              <div
+                                class="message_cont_main_inner_status online"
+                              >
+                                <img
+                                  src="../static/images/profiles/profile_3.jpeg"
+                                  alt="Profile"
+                                  class="message_cont_main_inner_img_img"
+                                />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="message_cont_main_inner_splited_two_lr_cont"
+                          >
+                            <div class="main_text_of_message">
+                              Salam necesen
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="message_cont_main_inner_splited_two_tb bottom_cnt"
+                        >
+                          <div
+                            class="message_cont_main_inner_splited_two_tb_time_and_view"
+                          >
+                            <div class="view_cont_message_info">
+                              <div class="view_cont_main">
+                                <div class="view_cont_main_icon action_eye_one">
+                                  <i class="fi fi-ss-eye sent_saw eye"></i>
+                                  <i class="fi fi-ss-eye waiting eye"></i>
+                                  <i class="fi fi-sr-low-vision sent_not_saw eye"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="last_seen_message_info">10:07</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="messages_cont_main_inner receiver">
+                      <div class="messages_cont_main_inner_inner_cnt">
+                        <div
+                          class="message_cont_main_inner_splited_two_tb top_cnt"
+                        >
+                          <div class="message_cont_main_inner_splited_one_lr">
+                            <div class="message_cont_main_inner_inner_img">
+                              <div
+                                class="message_cont_main_inner_status online"
+                              >
+                                <img
+                                  src="../static/images/profiles/profile_2.png"
+                                  alt="Profile"
+                                  class="message_cont_main_inner_img_img"
+                                />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="message_cont_main_inner_splited_two_lr_cont"
+                          >
+                            <div class="main_text_of_message">
+                              Salam yaxsi sen necesen
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="message_cont_main_inner_splited_two_tb bottom_cnt"
+                        >
+                          <div
+                            class="message_cont_main_inner_splited_two_tb_time_and_view"
+                          >
+                            <div class="view_cont_message_info">
+                              <div class="view_cont_main">
+                                <div class="view_cont_main_icon action_eye_two">
+                                  <i class="fi fi-ss-eye sent_saw eye"></i>
+                                  <i class="fi fi-ss-eye waiting eye"></i>
+                                  <i class="fi fi-sr-low-vision sent_not_saw eye"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="last_seen_message_info">10:07</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Messages End -->
+                  </div>
+
+                  <div class="send_cont_stable">
+                    <div class="send_cont_main">
+                      <div class="send_cont_main_inner">
+                        <button class="send_cont_main_inner_icon smile_cnt">
+                          <i class="fi fi-rr-comment-smile"></i>
+                        </button>
+
+                        <div class="line_bnt_split_cont_for_send">
+                          <div class="line_bnt_spliter_send"></div>
+                        </div>
+
+                        <div class="send_cont_main_inner_input_cont">
+                          <input
+                            type="text"
+                            class="send_cont_main_inner_input"
+                            placeholder="Type a message"
+                          />
+                        </div>
+
+                        <button class="send_cont_main_inner_icon send_icn">
+                          <i class="fi fi-sr-paper-plane"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

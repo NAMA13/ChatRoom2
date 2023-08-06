@@ -106,8 +106,8 @@
           </div>
           <div class="section_2">
             <form
-              th:action="@{/login}"
               method="post"
+              th:action="@{/authenticate-user}"
               class="login_and_signup_cont_inner"
             >
               <div class="input_cont_main">
@@ -119,6 +119,7 @@
                     id="username"
                     class="input_main"
                     placeholder="Email"
+                    required
                   />
                   <label for="username" class="check" hidden></label>
                 </div>
@@ -130,6 +131,7 @@
                     id="password"
                     class="input_main"
                     placeholder="Password"
+                    required
                   />
                   <label for="password" class="check" hidden></label>
                 </div>
@@ -139,13 +141,12 @@
                 <button class="button_main_submit"><span>Login</span></button>
                 <div class="other_info_for_login_and_sign_up">
                   <div class="text_wlcm small_text bottom_text">
-                    Don't have an account? <a th:href="@{/create-account}">Sign up</a>
+                    Don't have an account?
+                    <a th:href="@{/create-account}">Sign up</a>
                     now.
                   </div>
                 </div>
               </div>
-
-
 
               <!-- Ends -->
             </form>
